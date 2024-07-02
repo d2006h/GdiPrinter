@@ -1,0 +1,143 @@
+﻿using System;
+using System.Text;
+
+namespace AbtgGdiPrinter
+{
+    public class DefinitionsClass
+    {
+        public const string STR_FORM_NAME = "formName";
+        public const string STR_FORM_FILE = "fileName";
+        public const string STR_FORM_PATH = "pathAddress";
+        public const string STR_PRINTER_NAME = "PrinterName";
+        public const string STR_PAPER_ORIENTATION = "Orientation";
+        public const string ModuleID = "GDIPrinter";
+        public const string CONFIG_FILE_PATH = @"C:\ABTGSP\Configuration\GDI-Printer-Conf.XML";
+        public static double LeftMargin = 0.5;
+        public static double RightMargin = 0.5;
+        public static double TopMargin = 0.5;
+        public static double BottomMargin = 0.5;
+        public enum PrintFormName
+        {
+            TransferData,
+            TransactionError,
+            CardBalanceData,
+            CardBlock,
+            ShebaAccount,
+            ShebaCard,
+            BillPaymentData,
+            ChargePaymentData,
+            TopupPaymentData,
+            ChangeMainPassword,
+            ChangeSecoundPassword,
+            LoanData,
+            MiniStatementData,
+            BillInquiryData,
+            AccountTransfer,
+            ShebaTransfer,
+            ChargeData,
+            TollData,
+            MunicipalityData,
+            UniversityData,
+            Kheirieh,
+            GovernmentPay,
+            DisablePIN2,
+        }
+        public enum PrinterReturnValue
+        {
+            ERR_FRM_FATAL_ERROR = -1007,
+            ERR_EVENT_MANAGER_ERROR = -1006,
+            ERR_EVENT_MANAGER_NOT_INSTALLED = -1005,
+            ERR_INVALID_FUNCTION_ARGUMENT = -1004,
+            ERR_BUS_ERROR = -1002,
+            ERR_FUNCTION_NOT_SUPPORTED = -1001,
+            ERR_FW_NOT_FOUND = -1000,
+            ERR_PTR_MEDIASIZE = -129,
+            ERR_PTR_SEQUENCEINVALID = -128,
+            ERR_PTR_SOURCEINVALID = -127,
+            ERR_PTR_LAMPINOP = -126,
+            ERR_PTR_TONEROUT = -125,
+            ERR_PTR_INKOUT = -124,
+            ERR_PTR_PAPEROUT = -123,
+            ERR_PTR_PAPERJAMMED = -122,
+            ERR_PTR_CHARSETDATA = -121,
+            ERR_PTR_FILE_IO_ERROR = -120,
+            ERR_PTR_MEDIAJAMMED = -119,
+            ERR_PTR_SHUTTERFAIL = -118,
+            ERR_PTR_MEDIATURNFAIL = -117,
+            ERR_PTR_PAGETURNFAIL = -116,
+            ERR_PTR_STACKERFULL = -115,
+            ERR_PTR_RETRACTBINFULL = -114,
+            ERR_PTR_MEDIASKEWED = -113,
+            ERR_PTR_FIELDINVALID = -112,
+            ERR_PTR_FORMINVALID = -111,
+            ERR_PTR_MEDIAINVALID = -110,
+            ERR_PTR_EXTENTNOTSUPPORTED = -109,
+            ERR_PTR_MEDIANOTFOUND = -108,
+            ERR_PTR_FIELDERROR = -107,
+            ERR_PTR_FIELDSPECFAILURE = -106,
+            ERR_PTR_MEDIAOVERFLOW = -105,
+            ERR_PTR_FLUSHFAIL = -104,
+            ERR_PTR_READNOTSUPPORTED = -103,
+            ERR_PTR_NOMEDIAPRESENT = -102,
+            ERR_PTR_FIELDNOTFOUND = -101,
+            ERR_PTR_FORMNOTFOUND = -100,
+            ERR_UNSUPP_DATA = -56,
+            ERR_USER_ERROR = -55,
+            ERR_CONNECTION_LOST = -54,
+            ERR_SOFTWARE_ERROR = -53,
+            ERR_INVALID_DATA = -52,
+            ERR_VERSION_ERROR_IN_SRVC = -51,
+            ERR_UNSUPP_COMMAND = -50,
+            ERR_UNSUPP_CATEGORY = -49,
+            ERR_TIMEOUT = -48,
+            ERR_SRVC_VER_TOO_LOW = -47,
+            ERR_SRVC_VER_TOO_HIGH = -46,
+            ERR_SPI_VER_TOO_LOW = -45,
+            ERR_SPI_VER_TOO_HIGH = -44,
+            ERR_SERVICE_NOT_FOUND = -43,
+            ERR_OUT_OF_MEMORY = -42,
+            ERR_OP_IN_PROGRESS = -41,
+            ERR_NOT_REGISTERED = -40,
+            ERR_NOT_STARTED = -39,
+            ERR_NOT_OK_TO_UNLOAD = -38,
+            ERR_NOT_LOCKED = -37,
+            ERR_NO_TIMER = -36,
+            ERR_NO_SUCH_THREAD = -35,
+            ERR_NO_SERVPROV = -34,
+            ERR_NO_BLOCKING_CALL = -33,
+            ERR_LOCKED = -32,
+            ERR_INVALID_TRACELEVEL = -31,
+            ERR_INVALID_TIMER = -30,
+            ERR_INVALID_SERVPROV = -29,
+            ERR_INVALID_RESULT = -28,
+            ERR_INVALID_REQ_ID = -27,
+            ERR_INVALID_POINTER = -26,
+            ERR_INVALID_HWNDREG = -25,
+            ERR_INVALID_HWND = -24,
+            ERR_INVALID_HPROVIDER = -23,
+            ERR_INVALID_HSERVICE = -22,
+            ERR_INVALID_EVENT_CLASS = -21,
+            ERR_INVALID_COMMAND = -20,
+            ERR_INVALID_CATEGORY = -19,
+            ERR_INVALID_BUFFER = -18,
+            ERR_INVALID_APP_HANDLE = -17,
+            ERR_INVALID_ADDRESS = -16,
+            ERR_INTERNAL_ERROR = -15,
+            ERR_HARDWARE_ERROR = -14,
+            ERR_DEV_NOT_READY = -13,
+            ERR_CFG_VALUE_TOO_LONG = -12,
+            ERR_CFG_NO_MORE_ITEMS = -11,
+            ERR_CFG_NAME_TOO_LONG = -10,
+            ERR_CFG_KEY_NOT_EMPTY = -9,
+            ERR_CFG_INVALID_VALUE = -8,
+            ERR_CFG_INVALID_SUBKEY = -7,
+            ERR_CFG_INVALID_NAME = -6,
+            ERR_CFG_INVALID_HKEY = -5,
+            ERR_CANCELED = -4,
+            ERR_API_VER_TOO_LOW = -3,
+            ERR_API_VER_TOO_HIGH = -2,
+            ERR_ALREADY_STARTED = -1,
+            SUCCESS = 0
+        }
+    }
+}
